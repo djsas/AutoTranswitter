@@ -29,6 +29,7 @@ foreach($mentions as $Timeline){
 		//print $en_text.PHP_EOL;
 		$en_text = $translator->deleteWords($en_text);
 		$ja_text = $translator->translate($en_text, "en", "ja");
+		$ja_text = $translator->addNote($ja_text);
 		//print $ja_text.PHP_EOL;
 		
 		//送信する文字列を取得する
@@ -42,6 +43,6 @@ foreach($mentions as $Timeline){
 		//文字列が空じゃなかったらツイートを送信する
 		//if($text){ $myBot->Post($text); }
 		
-		$translator->pushLog($id);
+		//$translator->pushLog($id);
 	}
 }

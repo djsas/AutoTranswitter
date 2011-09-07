@@ -2,6 +2,9 @@
 //reference => http://twbot.blogspot.com/2011/06/googleapi201112microsoft-translatorapi.html
 
 class Translator{
+	public function addNote($t){
+		return $t." (auto-translated by Bing)";
+	}
 	function getLogs(){
 		return explode("\n", file_get_contents("log.txt"));
 	}
